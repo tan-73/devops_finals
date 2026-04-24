@@ -15,17 +15,16 @@ public class Calculator {
 
     public int div (int a, int b) {
         if (b == 0) {
-            System.out.println("Cannot divide by zero");
-            return 0;
+            throw new ArithmeticException("Cannot divide by zero");
         }
         return a/b;
     }
 
     public static void main (String[] args) {
         Calculator calc = new Calculator();
-        calc.add (69, 87);
-        calc.sub(78, 54);
-        calc.mul(4, 20);
-        calc.div(20, 4);
+        System.out.println(calc.add (69, 87));
+        System.out.println(calc.sub(78, 54));
+        System.out.println(calc.mul(4, 20));
+        System.out.println(calc.div(20, 0));
     }
 }
